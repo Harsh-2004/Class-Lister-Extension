@@ -1,0 +1,38 @@
+{
+  "name": "class-list-extension",
+  "displayName": "Class List Extension",
+  "description": "An extension that lists classes in the current file in the sidebar.",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": {
+      "vscode": "^1.90.0"
+  },
+  "activationEvents": [   
+  ],
+  "main": "./extension.js",
+  "contributes": {
+      "commands": [
+          {
+              "command": "classList.showClasses",
+              "title": "Show Class List"
+          }
+      ],
+      "viewsContainers": {
+          "activitybar": [
+              {
+                  "id": "classListViewContainer",
+                  "title": "Class List",
+                  "icon": "default"
+              }
+          ]
+      },
+      "views": {
+          "classListViewContainer": [
+              {
+                  "id": "classListView",
+                  "name": "Classes"
+              }
+          ]
+      }
+  }
+}
